@@ -1,7 +1,7 @@
 # Mini paket za izpite
 
 Developer verzija dostopna na:
-[github](https://github.com/borbregant/IZPIT):
+[github](https://github.com/borbregant/Rizpit):
 
 ``` r
 # install.packages("remotes")
