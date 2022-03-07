@@ -27,6 +27,8 @@ test2$TRETJA <- ocene
 
 
 test2 <- test2[-c(28:48), ]
+test2 <- test2[ , -c(1)]
+test2 <- test2[,c(ncol(test2),1:(ncol(test2)-1))]#da zadni stolpec na prvo mesto
 
-write.csv(test1,"C:\\Users\\bor\\Documents\\PAKET\\tests\\test1.csv", row.names = FALSE)
-write.csv(test2,"C:\\Users\\bor\\Documents\\PAKET\\tests\\test2.csv", row.names = FALSE)
+write.csv(test1,"C:\\Users\\bor\\test1.csv", row.names = FALSE)
+write.csv(test2,"C:\\Users\\bor\\test2.csv", row.names = FALSE)
