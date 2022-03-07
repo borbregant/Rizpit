@@ -5,7 +5,7 @@ Developer verzija dostopna na:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("borbregant/IZPIT")
+remotes::install_github("borbregant/Rizpit")
 ```
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/izpit/master?urlpath=rstudio) RStudio
 
