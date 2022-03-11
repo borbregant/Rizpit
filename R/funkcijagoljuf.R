@@ -1,16 +1,21 @@
 #' funkcijagoljuf
 #'
-#' Funkcija preveri kandidate za goljufe
-#' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|
+#' Funkcija preveri kandidate za goljufe na podlagi sedeznega reda, ki je privzeta za ucilnico
+#'                                        oo oooo oo  sedezi 8-16 iz leve proti desni
+#'                                        oo oooo oo  sedezi 1-8 iz leve proti desni
+#'                                           |==|     kateder
+#' Opazuje le kandidate, ki sedijo na sosednjih mestih in direktno za njimi
+#' Problem: Vcasih izpostavi prvo in zadnjo vrsto kot sosednji... daj v if stavek
+#' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|sedez
 #' @keywords goljuf
 #' @export
-#' @examples
+#' @examples     #kolokvij 1 ima dodaten stolpec sedezni red za testiranje
 #' funkcijagoljuf()
 
 funkcijagoljuf <- function(myData){
   
-  myData$VSOTA <- rowSums(myData[2:ncol(myData)])
-  myData <- myData[,as.vector(c("VPISNA","VSOTA"))]
+  #myData$VSOTA <- rowSums(myData[2:ncol(myData)])
+ # myData <- myData[,as.vector(c("VPISNA","VSOTA"))]
   
   tabelagoljuf <- data.frame(matrix(vector(), nrow(myData), nrow(myData)))
   colnames(tabelagoljuf) <- myData$VPISNA
