@@ -16,7 +16,7 @@ ocena = function(izpit,skupnotock) {
   
   for(i in 1:nrow(izpit)){
     r = if (izpit$VSOTA[i]/skupnotock > 90) {
-      "odlično"
+      "odlicno"
     } else if (izpit$VSOTA[i]/skupnotock > 70) {
       "prav dobro"
     } else if (izpit$VSOTA[i]/skupnotock > 60) {

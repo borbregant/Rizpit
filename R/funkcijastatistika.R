@@ -2,6 +2,7 @@
 #'
 #' Funkcija izvozi txt in pdf statistike izpita myData
 #' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|
+#' @param maxtock maksimalno mozno stevilo dosezenih tock
 #' @keywords statistika
 #' @export
 #' @examples

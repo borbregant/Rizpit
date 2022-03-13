@@ -14,8 +14,6 @@
 
 funkcijagoljuf <- function(myData){
   
-  #myData$VSOTA <- rowSums(myData[2:ncol(myData)])
- # myData <- myData[,as.vector(c("VPISNA","VSOTA"))]
   
   tabelagoljuf <- data.frame(matrix(vector(), nrow(myData), nrow(myData)))
   colnames(tabelagoljuf) <- myData$VPISNA
@@ -44,7 +42,7 @@ funkcijagoljuf <- function(myData){
   breaks <- quantile(tabelagoljuf, probs = seq(.05, .95, .05), na.rm = TRUE)
   colors <- round(seq(255, 40, length.out = length(breaks) + 1), 0) %>% 
     {paste0("rgb(255,", ., ",", ., ")")}
-  datatable(tabelagoljuf) %>% formatStyle(names(tabelagoljuf), backgroundColor = styleInterval(breaks, colors))
+  print(datatable(tabelagoljuf) %>% formatStyle(names(tabelagoljuf), backgroundColor = styleInterval(breaks, colors)))
   
   #Izpis kandidatov za goljufe
   tabelagoljuf[is.na(tabelagoljuf)] <- 0

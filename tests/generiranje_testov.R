@@ -1,4 +1,5 @@
 kolokvij1$sedez <- 1:48
+kolokvij1$VPISNA <- 1:48
 write.csv(kolokvij1,"C:\\Users\\bor\\kolokvij1.csv", row.names = FALSE)
 
 test1 <- kolokvij1
