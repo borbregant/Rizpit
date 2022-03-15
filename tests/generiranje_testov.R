@@ -1,3 +1,15 @@
+#######################
+# ZA POGON
+#######################
+kolokvij1 <- read_csv("~/GitHub/Rizpit/tests/kolokvij1.csv")
+kolokvij2 <- read_csv("~/GitHub/Rizpit/tests/kolokvij2.csv")
+test1 <- read_csv("~/GitHub/Rizpit/tests/test1.csv")
+test2 <- read_csv("~/GitHub/Rizpit/tests/test2.csv")
+#######################
+# Koda za generiranje
+# Manjkajo odseki saj delno narejena v konzoli
+#######################
+
 kolokvij1$sedez <- 1:48
 kolokvij1$VPISNA <- 1:48
 write.csv(kolokvij1,"C:\\Users\\bor\\kolokvij1.csv", row.names = FALSE)

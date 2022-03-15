@@ -7,7 +7,7 @@ Developer verzija dostopna na:
 # install.packages("remotes")
 remotes::install_github("borbregant/Rizpit")
 ```
-* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/izpit/master?urlpath=rstudio) RStudio
+* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/Rizpit/master?urlpath=rstudio) RStudio
 
 Funkcije v paketu:
 * `statistika` : Izpiše osnovne statistike izpita

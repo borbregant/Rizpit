@@ -13,7 +13,7 @@ library(plyr)
 library(purrr)
 library(dplyr)
 
-urejanjetabel <- function(kolokvij1
+urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pravilno
                           ,kolokvij2=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,kolokvij3=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,kolokvij4=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
