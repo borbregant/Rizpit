@@ -1,6 +1,7 @@
 #######################
 # ZA POGON
 #######################
+library(tidyverse)
 kolokvij1 <- read_csv("~/GitHub/Rizpit/tests/kolokvij1.csv")
 kolokvij2 <- read_csv("~/GitHub/Rizpit/tests/kolokvij2.csv")
 test1 <- read_csv("~/GitHub/Rizpit/tests/test1.csv")
@@ -46,5 +47,9 @@ test2 <- test2[-c(28:48), ]
 test2 <- test2[ , -c(1)]
 test2 <- test2[,c(ncol(test2),1:(ncol(test2)-1))]#da zadni stolpec na prvo mesto
 
-write.csv(test1,"C:\\Users\\bor\\test1.csv", row.names = FALSE)
-write.csv(test2,"C:\\Users\\bor\\test2.csv", row.names = FALSE)
+kolokvij1$VPISNA <- 1:nrow(kolokvij1)
+kolokvij2$VPISNA <- 1:nrow(kolokvij2)
+kolokvij2$sedez <- 1:nrow(kolokvij2)
+
+write.csv(kolokvij2,"C:\\Users\\bor\\kolokvij2.csv", row.names = FALSE)
+write.csv(kolokvij1,"C:\\Users\\bor\\kolokvij1.csv", row.names = FALSE)

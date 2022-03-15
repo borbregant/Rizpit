@@ -55,7 +55,7 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
   if(missing(skupnotock)){return(SKUPNATABELA)}#  ce ne podamo max tock vrne le ime in vsoto
   else{#                                          ce podamo max tocke vrne ime in procent
     SKUPNATABELA$VSOTA <- SKUPNATABELA$VSOTA / skupnotock
-    names(SKUPNATABELA)[names(df) == 'VSOTA'] <- 'PROCENT'
+    names(SKUPNATABELA)[names(SKUPNATABELA) == 'VSOTA'] <- 'PROCENT'
     
     # ocena = rep(0, nrow(SKUPNATABELA))#vektor ocen (R deluje hitreje ce ne rabi sproti generirati)
     # for(i in 1:nrow(SKUPNATABELA)){
