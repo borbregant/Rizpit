@@ -1,7 +1,7 @@
 #' funkcijastatistika
 #'
 #' Funkcija izvozi txt in pdf statistike izpita myData
-#' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|
+#' @param myData input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
 #' @param maxtock maksimalno mozno stevilo dosezenih tock
 #' @keywords statistika
 #' @export
@@ -11,7 +11,7 @@
 funkcijastatistika <- function(myData,maxtock){
   
   myData$VSOTA <- rowSums(myData[2:ncol(myData)])
-  myData <- myData[,as.vector(c("VPISNA","VSOTA"))]
+  myData <- myData[,as.vector(c("IME","VSOTA"))]
   
   myData$PROCENT <- myData$VSOTA / maxtock
   myData$PROCENT <- as.numeric(myData$PROCENT)

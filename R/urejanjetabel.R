@@ -1,7 +1,7 @@
 #' urejanjetabel
 #'
 #' Funkcija iz dataframeov posameznih izpitov !najvec8! sestavi skupno tabelo, ki prikaze le kandidata in skupno tock
-#' Lahko kombiniramo s funkcijo ocena
+#' Lahko podamo argument skupnotock=, ki namesto skupnega stevila tock priredi oceno vsakemu kandidatu
 #' @param kolokvij1 input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
 #' @keywords ocena
 #' @export
@@ -57,23 +57,23 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
     SKUPNATABELA$VSOTA <- SKUPNATABELA$VSOTA / skupnotock
     names(SKUPNATABELA)[names(SKUPNATABELA) == 'VSOTA'] <- 'PROCENT'
     
-    # ocena = rep(0, nrow(SKUPNATABELA))#vektor ocen (R deluje hitreje ce ne rabi sproti generirati)
-    # for(i in 1:nrow(SKUPNATABELA)){
-    #   r = if (SKUPNATABELA$PROCENT[i] > 0.9) {
-    #     "odlicno"
-    #   } else if (SKUPNATABELA$PROCENT[i] > 0.76) {
-    #     "prav dobro"
-    #   } else if (SKUPNATABELA$PROCENT[i] > 0.63) {
-    #     "dobro"
-    #   } else if (SKUPNATABELA$PROCENT[i] > 0.5) {
-    #     "zadostno"
-    #   } else {
-    #     "nezadostno"
-    #   }
-    #   ocena[i] = r
-    # }
-    # SKUPNATABELA$OCENA <- ocena
-    # SKUPNATABELA <- SKUPNATABELA[,as.vector(c("VPISNA","OCENA"))]
+    ocena = rep(0, nrow(SKUPNATABELA))#vektor ocen (R deluje hitreje ce ne rabi sproti generirati)
+    for(i in 1:nrow(SKUPNATABELA)){
+      r = if (SKUPNATABELA$PROCENT[i] > 0.9) {
+        "odlicno"
+      } else if (SKUPNATABELA$PROCENT[i] > 0.76) {
+        "prav dobro"
+      } else if (SKUPNATABELA$PROCENT[i] > 0.63) {
+        "dobro"
+      } else if (SKUPNATABELA$PROCENT[i] > 0.5) {
+        "zadostno"
+      } else {
+        "nezadostno"
+      }
+      ocena[i] = r
+    }
+    SKUPNATABELA$OCENA <- ocena
+    SKUPNATABELA <- SKUPNATABELA[,as.vector(c("IME","OCENA"))]
     
     
     return(SKUPNATABELA)}

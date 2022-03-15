@@ -9,7 +9,7 @@
 #' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|sedez
 #' @keywords goljuf
 #' @export
-#' @examples     #kolokvij 1 ima dodaten stolpec sedezni red za testiranje
+#' @examples
 #' funkcijagoljuf()
 
 funkcijagoljuf <- function(myData){
