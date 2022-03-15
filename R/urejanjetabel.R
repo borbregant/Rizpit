@@ -21,6 +21,7 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
                           ,kolokvij6=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,kolokvij7=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,kolokvij8=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
+                          ,skupnotock
 ){
   kolokvij1$VSOTA <- rowSums(kolokvij1[2:ncol(kolokvij1)])
   kolokvij1 <- kolokvij1[,as.vector(c("IME","VSOTA"))]
@@ -50,6 +51,30 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
   SKUPNATABELA[is.na(SKUPNATABELA)] <- 0
   SKUPNATABELA$VSOTA <- rowSums(SKUPNATABELA[2:ncol(SKUPNATABELA)])
   SKUPNATABELA <- SKUPNATABELA[,as.vector(c("IME","VSOTA"))]
-  #write.table da se zapise v novo tabelo.... se prej jo kar v funkciji uredi da bo prikazala le procent vseh... se prej uredi da vrne oceno in ne tocke
-  return(SKUPNATABELA)
+  #write.table da se zapise v novo tabelo
+  if(missing(skupnotock)){return(SKUPNATABELA)}#  ce ne podamo max tock vrne le ime in vsoto
+  else{#                                          ce podamo max tocke vrne ime in procent
+    SKUPNATABELA$VSOTA <- SKUPNATABELA$VSOTA / skupnotock
+    names(SKUPNATABELA)[names(df) == 'VSOTA'] <- 'PROCENT'
+    
+    # ocena = rep(0, nrow(SKUPNATABELA))#vektor ocen (R deluje hitreje ce ne rabi sproti generirati)
+    # for(i in 1:nrow(SKUPNATABELA)){
+    #   r = if (SKUPNATABELA$PROCENT[i] > 0.9) {
+    #     "odlicno"
+    #   } else if (SKUPNATABELA$PROCENT[i] > 0.76) {
+    #     "prav dobro"
+    #   } else if (SKUPNATABELA$PROCENT[i] > 0.63) {
+    #     "dobro"
+    #   } else if (SKUPNATABELA$PROCENT[i] > 0.5) {
+    #     "zadostno"
+    #   } else {
+    #     "nezadostno"
+    #   }
+    #   ocena[i] = r
+    # }
+    # SKUPNATABELA$OCENA <- ocena
+    # SKUPNATABELA <- SKUPNATABELA[,as.vector(c("VPISNA","OCENA"))]
+    
+    
+    return(SKUPNATABELA)}
 }
