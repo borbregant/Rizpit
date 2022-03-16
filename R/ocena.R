@@ -15,13 +15,13 @@ ocena = function(izpit,skupnotock) {
   ocena = rep(0, nrow(izpit))#vektor ocen (R deluje hitreje ce ne rabi sproti generirati)
   
   for(i in 1:nrow(izpit)){
-    r = if (izpit$VSOTA[i]/skupnotock > 90) {
+    r = if (izpit$VSOTA[i]/skupnotock > 0.9) {
       "odlicno"
-    } else if (izpit$VSOTA[i]/skupnotock > 70) {
+    } else if (izpit$VSOTA[i]/skupnotock > 0.76) {
       "prav dobro"
-    } else if (izpit$VSOTA[i]/skupnotock > 60) {
+    } else if (izpit$VSOTA[i]/skupnotock > 0.65) {
       "dobro"
-    } else if (izpit$VSOTA[i]/skupnotock > 50) {
+    } else if (izpit$VSOTA[i]/skupnotock > 0.5) {
       "zadostno"
     } else {
       "nezadostno"

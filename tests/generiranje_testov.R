@@ -6,8 +6,20 @@ kolokvij1 <- read_csv("~/GitHub/Rizpit/tests/kolokvij1.csv")
 kolokvij2 <- read_csv("~/GitHub/Rizpit/tests/kolokvij2.csv")
 test1 <- read_csv("~/GitHub/Rizpit/tests/test1.csv")
 test2 <- read_csv("~/GitHub/Rizpit/tests/test2.csv")
+
 #######################
-# Koda za generiranje
+# ZA POGON TESTIRANJ
+#######################
+urejanjetabel(test1,test2)
+urejanjetabel(test1,test2,skupnotock=80)
+
+ocena(kolokvij1,60)
+
+funkcijastatistika(test1,60)#generira datoteki v mapi, kjer je funkcija shranjena
+
+funkcijagoljuf(kolokvij1)
+#######################
+# Koda za generiranje       ni del testiranj
 # Manjkajo odseki saj delno narejena v konzoli
 #######################
 
