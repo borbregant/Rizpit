@@ -2,10 +2,10 @@
 
 ## Navodila za uporabo funkcij
 
-* `statistika` : Izpiše osnovne statistike izpita
-* `urejanjetabel` : Po imenu in priimku združi tabele in jih pripravi na obdevalo s `statistika`
-* `ocena` : Izpiše oceno za posamezno osebo
-* `goljuf` : S pomočjo sedežnega reda primerja razdalje med točkami nalog in izpiše podobne osebe.
+* `statistika` : Izpiše osnovne statistike izpita in jih izvozi v oblikah txt (za kvantile in splošen povzetek) in pdf (hitri grafični prikazi). Izvozi ju v mapi, kjer je funkcija shranjena (...\Rizpit\R)
+* `urejanjetabel` : Po imenu in priimku združi tabele in jih pripravi na obdevalo s `statistika`. Sprejme parametra skupnotock=TRUE, ki če je izbran namesto skupnega števila točk v tabelo vpiše procent. Opcija zapisi=TRUE pa tabelo zapise v obliki dataframe-a. Pazi: Zaenkrat to deluje le na računalniku Bor Breganta (zaradi pathov v računalniku), torej uporabljajte na lastno odgovornost (torej v funkciji spremenite path).
+* `ocena` : Izpiše oceno (v obliki besede) za posamezno osebo na podlagi izpita in skupnega števila točk.
+* `goljuf` : S pomočjo sedežnega reda primerja razdalje med točkami nalog in izpiše podobne osebe. Rezultate izvozi v konzoli in grafičnem delu konzole.
 
 ## Avtorji
   - **Bor Bregant** \[aut, cre\].

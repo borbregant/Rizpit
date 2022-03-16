@@ -5,7 +5,7 @@
 #'                                        oo oooo oo  sedezi 1-8 iz leve proti desni
 #'                                           |==|     kateder
 #' Opazuje le kandidate, ki sedijo na sosednjih mestih in direktno za njimi
-#' Problem: Vcasih izpostavi prvo in zadnjo vrsto kot sosednji... daj v if stavek
+#' Problem: na primeru kolokvij 1 izpostavi sedez 21 le enkrat, kar ne bi smelo biti ok?
 #' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|sedez
 #' @keywords goljuf
 #' @export

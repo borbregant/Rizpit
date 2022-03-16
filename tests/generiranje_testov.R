@@ -11,11 +11,12 @@ test2 <- read_csv("~/GitHub/Rizpit/tests/test2.csv")
 # ZA POGON TESTIRANJ
 #######################
 urejanjetabel(test1,test2)
-urejanjetabel(test1,test2,skupnotock=80)
+urejanjetabel(test1,test2,skupnotock=80)#namesto imen in vsote naredi tabelo imena|ocena
+urejanjetabel(test1,test2,skupnotock=80,zapisi=TRUE)#naredi in shrani skupno tabelo. Trenutno se shrani na moj lokalni racunalnik, tako da kdor hoce mora spremeniti PATH v sami funkciji
 
 ocena(kolokvij1,60)
 
-funkcijastatistika(test1,60)#generira datoteki v mapi, kjer je funkcija shranjena
+funkcijastatistika(test1,60)#generira datoteki v mapi, kjer je funkcija shranjena... ne potrebuje novih pathov (vsaj upam)
 
 funkcijagoljuf(kolokvij1)
 #######################

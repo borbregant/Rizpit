@@ -2,7 +2,9 @@
 #'
 #' Funkcija iz dataframeov posameznih izpitov !najvec8! sestavi skupno tabelo, ki prikaze le kandidata in skupno tock
 #' Lahko podamo argument skupnotock=, ki namesto skupnega stevila tock priredi oceno vsakemu kandidatu
-#' @param kolokvij1 input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
+#' @param kolokviji input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
+#' @param skupnotock skupno stevilo tock kolokvijev, da namesto tock v skupno tabelo vpise procent
+#' @param zapisi skupno tabelo zapise v obliki dataframe-a. zaenkrat deluje le na mojem lokalnem racunalniku
 #' @keywords ocena
 #' @export
 #' @examples
@@ -22,6 +24,7 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
                           ,kolokvij7=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,kolokvij8=data.frame(IME=c(0),PRVA=c(0),DRUGA=c(0),TRETJA=c(0))
                           ,skupnotock
+                          ,zapisi=FALSE
 ){
   kolokvij1$VSOTA <- rowSums(kolokvij1[2:ncol(kolokvij1)])
   kolokvij1 <- kolokvij1[,as.vector(c("IME","VSOTA"))]
@@ -75,6 +78,7 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
     SKUPNATABELA$OCENA <- ocena
     SKUPNATABELA <- SKUPNATABELA[,as.vector(c("IME","OCENA"))]
     
+    if (zapisi==TRUE) {write.table(SKUPNATABELA,"C:\\Users\\bor\\SKUPNATABELA.csv", row.names = FALSE)}
     
     return(SKUPNATABELA)}
 }
