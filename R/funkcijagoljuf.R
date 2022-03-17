@@ -6,7 +6,7 @@
 #'                                           |==|     kateder
 #' Opazuje le kandidate, ki sedijo na sosednjih mestih in direktno za njimi
 #' Problem: na primeru kolokvij 1 izpostavi sedez 21 le enkrat, kar ne bi smelo biti ok?
-#' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|...|TOCKEn|sedez
+#' @param myData input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|TOCKE2|TOCKE3|sedez
 #' @keywords goljuf
 #' @export
 #' @examples
