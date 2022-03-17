@@ -7,7 +7,9 @@
 funkcijastatistika(myData, maxtock)
 }
 \arguments{
-\item{myData}{input tabela ki sprejme nujno v obliki ...}
+\item{myData}{input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|}
+
+\item{maxtock}{maksimalno mozno stevilo dosezenih tock}
 }
 \description{
 Funkcija izvozi txt in pdf statistike izpita myData

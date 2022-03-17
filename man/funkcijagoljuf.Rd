@@ -7,10 +7,15 @@
 funkcijagoljuf(myData)
 }
 \arguments{
-\item{myData}{input tabela ki sprejme nujno v obliki ...}
+\item{myData}{input tabela ki sprejme nujno v obliki VPISNA|TOCKE1|TOCKE2|TOCKE3|sedez}
 }
 \description{
-Funkcija preveri kandidate za goljufe
+Funkcija preveri kandidate za goljufe na podlagi sedeznega reda, ki je privzeta za ucilnico
+oo oooo oo  sedezi 8-16 iz leve proti desni
+oo oooo oo  sedezi 1-8 iz leve proti desni
+|==|     kateder
+Opazuje le kandidate, ki sedijo na sosednjih mestih in direktno za njimi
+Problem: na primeru kolokvij 1 izpostavi sedez 21 le enkrat, kar ne bi smelo biti ok?
 }
 \examples{
 funkcijagoljuf()
