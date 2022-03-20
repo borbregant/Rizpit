@@ -76,7 +76,7 @@ urejanjetabel <- function(kolokvij1# brez dodanih praznih "ucencev" ne deluje pr
     SKUPNATABELA$OCENA <- ocena
     SKUPNATABELA <- SKUPNATABELA[,as.vector(c("IME","OCENA"))]
 
-    if (zapisi==TRUE) {write.table(SKUPNATABELA,"C:\\Users\\bor\\SKUPNATABELA.csv", row.names = FALSE)}
+    if (zapisi==TRUE) {write.table(SKUPNATABELA,"SKUPNATABELA.csv", row.names = FALSE)}
 
     return(SKUPNATABELA)}
 }
