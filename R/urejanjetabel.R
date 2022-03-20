@@ -4,7 +4,7 @@
 #' Lahko podamo argument skupnotock=, ki namesto skupnega stevila tock priredi oceno vsakemu kandidatu
 #' @param kolokviji input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
 #' @param skupnotock skupno stevilo tock kolokvijev, da namesto tock v skupno tabelo vpise procent
-#' @param zapisi skupno tabelo zapise v obliki dataframe-a. zaenkrat deluje le na mojem lokalnem racunalniku
+#' @param zapisi skupno tabelo zapise v obliki dataframe-a.
 #' @keywords ocena
 #' @export
 #' @examples
