@@ -11,9 +11,9 @@ remotes::install_github("borbregant/Rizpit")
 
 Funkcije v paketu:
 * `statistika` : Izpiše osnovne statistike izpita
-* `urejanjetabel` : Po imenu in priimku združi tabele in jih pripravi na obdevalo s `statistika`
+* `urejanjetabel` : Po imenu in priimku združi tabele in jih pripravi na obdelavo s `statistika`
 * `ocena` : Izpiše oceno za posamezno osebo
-* `goljuf` : S pomočjo sedežnega reda primerja razdalje med točkami nalog in izpiše podobne osebe.
+* `goljuf` : S pomočjo sedežnega reda primerja razdalje med točkami nalog in izpiše podobne osebe (možne goljufe).
 
 ## Avtorji
   - **Bor Bregant** \[aut, cre\].
