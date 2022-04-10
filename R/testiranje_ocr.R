@@ -37,6 +37,12 @@ tocke.prva <- ocr(tocke.prva, engine = numbers2)
 tocke.druga <- ocr(tocke.druga, engine = numbers2)
 tocke.tretja <- ocr(tocke.tretja, engine = numbers2)
 
+tocke.prva <- gsub("[\r\n]", "", tocke.prva)
+tocke.druga <- gsub("[\r\n]", "", tocke.druga)
+tocke.tretja <- gsub("[\r\n]", "", tocke.tretja)
+
+str <- c(tocke.prva,tocke.druga,tocke.tretja)
+
 #####################DODAMO PRISILNO LEP SEZNAM TOCK
 test1 <- image_read("C:\\Users\\bor\\Downloads\\test1.png")
 image_browse(test1)
