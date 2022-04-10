@@ -1,19 +1,20 @@
 #' branje.izpita
 #'
-#' Funkcija izvozi txt in pdf statistike izpita myData
-#' @param myData input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|
-#' @param maxtock maksimalno mozno stevilo dosezenih tock
-#' @keywords statistika
-#' @export
+#' Funkcija izvozi ime kandidata in njegove tocke na skeniranem izpitu
+#' @param test skeniran izpit v obliki pnd
+#' @keywords sken, ocr, branje
+#' @export kandidat ime, priimek in stevilo tock na posamezni nalogi
 #' @examples
 #' branje.izpita()
 
-branje.izpita <- function(izpit = image_read("https://raw.githubusercontent.com/borbregant/Rizpit/master/tests/test.png")){
+branje.izpita <- function(test = image_read("https://raw.githubusercontent.com/borbregant/Rizpit/master/tests/test.png")){
 
   library(tesseract)#za ocr
   library(magick)#za obdelavo slik
   library(imagerExtra)#za lepse slike
   library(stringr)
+
+  numbers2 <- tesseract(options = list(tessedit_char_whitelist = ".0123456789"))#Definiramo da ocr bere le tocke
   ##############################################################################
   ime.priimek <- image_crop(test, "200x150+80")
   ime.priimek <- ocr(ime.priimek, engine = tesseract("eng"))

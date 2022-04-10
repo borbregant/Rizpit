@@ -20,7 +20,7 @@ urejanjetabel(
 \arguments{
 \item{skupnotock}{skupno stevilo tock kolokvijev, da namesto tock v skupno tabelo vpise procent}
 
-\item{zapisi}{skupno tabelo zapise v obliki dataframe-a. zaenkrat deluje le na mojem lokalnem racunalniku}
+\item{zapisi}{skupno tabelo zapise v obliki dataframe-a.}
 
 \item{kolokviji}{input tabela ki sprejme nujno v obliki IME|TOCKE1|...|TOCKEn|}
 }
