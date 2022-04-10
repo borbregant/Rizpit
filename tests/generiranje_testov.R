@@ -19,6 +19,8 @@ ocena(kolokvij1,60)
 funkcijastatistika(test1,60)#generira datoteki v mapi, kjer je funkcija shranjena... ne potrebuje novih pathov (vsaj upam)
 
 funkcijagoljuf(kolokvij1)
+
+branje.izpita()#ima ze v atributu vgrajeno demonstracijo
 #######################
 # Koda za generiranje       ni del testiranj
 # Manjkajo odseki saj delno narejena v konzoli
