@@ -40,3 +40,6 @@
       
     + Glej test1.
 
+## Izpit
+
+`test.png` za demonstracijo funkcije `branje.izpita`. Z rdečo je označeno, kaj funkcija prebere
